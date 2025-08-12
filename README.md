@@ -1,10 +1,20 @@
 # ResNetLite Edge AI Image Classification Pipeline
 
-Lightweight ResNet-based image classification pipeline optimized for edge devices.  
+Lightweight ResNet-based image classification(For different Trash items) pipeline optimized for edge devices.  
 Includes training, quantization-aware training (QAT), model optimization, and export to Core ML format for Apple Silicon and other platforms.
 
 ---
 
+## Model Details
+
+- **Architecture:** Custom lightweight ResNet variant (`ResNetLite`) designed for resource-constrained edge devices  
+- **Blocks:** Basic residual blocks with 3x3 convolutions and batch normalization  
+- **Layers:** Four layers with configurable block repetitions ([2, 2, 2, 2] by default)  
+- **Channels:** Base channel count configurable (default 32), balancing accuracy and efficiency  
+- **Output:** Multi-class classifier for 6 trash categories (adjustable based on dataset)  
+- **Optimizations:** Batch norm + convolution fusion, quantization-aware training for 16-bit float Core ML export
+
+---
 ## Features
 
 - Custom **ResNetLite** CNN designed for efficient edge deployment  
